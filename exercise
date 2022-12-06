@@ -43,5 +43,10 @@ public class employee {
         int x=e2.sumOfAny(34,24,400);
         System.out.println("\n sum :" +x);
         e2.display("abc","123","xyz");
+        
+        Scanner scanner= new Scanner(System.in);
+        System.out.println("enter your name \n ");
+        String name =scanner.nextLine();
+        System.out.println("your name is "+name);
     }
 }
