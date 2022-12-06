@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class employee {
+   String name,id;
+   double salary;
+   employee(){
+       System.out.println("\n default constructor call");
+
+   }
+   employee(String name, int pay){
+       System.out.println("\n cons with two initial value");
+       this.name=name;
+       this.salary= pay;
+       this.id="null";
+   }
+   employee(String n){
+       System.out.println("\ncons with one initial value");
+       this.name=n;
+       this.id="null";
+       this.salary=0.0;
+
+   }
+   int sumOfAny(int ...x){
+       int sum=0;
+       for(int i=0; i<x.length; i++) {
+           sum += sum+x[i];
+       }
+       return sum;
+   }
+   void display(String...a){
+       for (int i=0;i<a.length;i++ )
+           System.out.println(a[i]);
+   }
+
+
+    public static void main(String[] args) {
+        employee e1 = new employee("xyz", 8000);
+        System.out.println("name of e1 "+ e1.name);
+        System.out.println("id :" +e1.id);
+        System.out.println("salary:" + e1.salary );
+
+        employee e2= new employee("tsion");
+        System.out.println("name: " + e2.name);
+        int x=e2.sumOfAny(34,24,400);
+        System.out.println("\n sum :" +x);
+        e2.display("abc","123","xyz");
+
+        Scanner scanner= new Scanner(System.in);
+        System.out.println("enter your name \n ");
+        String name =scanner.nextLine();
+        System.out.println("your name is "+name);
+
+    }
+}
