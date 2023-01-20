@@ -1,37 +1,17 @@
-import java.util.Scanner;
+package com.tsion;
+
+import com.tsion.animals;
+import com.tsion.dog;
 
 public class Main {
     public static void main(String[] args) {
 
-
-        int position= calculateHighScore(1500);
-        displayHighScorePosition("tim", position);
-        position = calculateHighScore(900);
-        displayHighScorePosition("beti", position);
-        position = calculateHighScore(400);
-        displayHighScorePosition("maki", position);
-        position = calculateHighScore(50);
-        displayHighScorePosition("minase", position);
-
-
+        animals animal = new animals("cat",1,1,23,14);
+        dog Dog = new dog("jack",4,1,2,32,23,43);
+       // Dog.eat();
+        Dog.walk();
+        animal.move(9);
+        System.out.println(Dog.getName());
+        System.out.println(animal.getWeight());
     }
-
-    public static void displayHighScorePosition(String name, int position) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println(name + " managed to get in postion " + position);
-    }
-
-    public static int calculateHighScore(int score) {
-        int position=4;
-        if (score > 1000) {
-            position=1;
-        } else if (score > 500 && score < 1000) {
-            position=2;
-        } else if (score > 100 && score < 500) {
-            position=3;
-        } else {position=4 ;}
-
-
-        return position;
-    } }
+}
